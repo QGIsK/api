@@ -6,7 +6,7 @@ export default theme({
       {
         'async': true,
         'defer': true,
-        'data-domain': 'api.demiann.dev',
+        'data-domain': 'api.docs.demiann.dev',
         'src': 'https://analytics.demiann.dev/js/plausible.js',
       },
     ],
