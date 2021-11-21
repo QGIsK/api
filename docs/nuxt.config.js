@@ -8,7 +8,7 @@ export default theme({
         'defer': true,
         'data-domain': 'api.docs.demiann.dev',
         'data-api': 'https://demiann.dev/uwu/api/event',
-        'src': 'https://demiann.dev/uwu/js/plausible.js',
+        'src': 'https://demiann.dev/uwu/js/script.js',
       },
     ],
   },
