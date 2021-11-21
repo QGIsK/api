@@ -1,0 +1,10 @@
+{
+  "title": "API Documentation",
+  "url": "api.demiann.dev/docs",
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
+  },
+  "github": "qgisk/api",
+  "twitter": "qgisk_dev"
+}

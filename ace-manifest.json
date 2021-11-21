@@ -50,5 +50,6 @@
       "flags": []
     }
   },
-  "aliases": {}
+  "aliases": {},
+  "ignore": ["docs"]
 }
