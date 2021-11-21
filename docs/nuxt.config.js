@@ -7,7 +7,7 @@ export default theme({
         'async': true,
         'defer': true,
         'data-domain': 'api.docs.demiann.dev',
-        'src': 'Demian',
+        'src': 'https://uwu.demiann.dev/js/script.js',
       },
     ],
   },
