@@ -14,9 +14,11 @@ export default class FaceitController {
       ? await FaceitClient.players.get({ nickname: query.username })
       : await FaceitClient.players.show({ player_id: query.id })
 
-    if (profile.errors) return response.notFound(profile)
-
     const gameIndex = query.game ? query.game : 'csgo'
+
+    if (profile.errors || !profile.games[gameIndex])
+      return response.notFound('Player statistics not found')
+
     const skillLevel = profile.games[gameIndex].skill_level
     const elo = profile.games[gameIndex].faceit_elo
 
