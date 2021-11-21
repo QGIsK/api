@@ -25,6 +25,8 @@
   "dependencies": {
     "@adonisjs/core": "^5.4.1",
     "@adonisjs/repl": "^3.1.7",
+    "@cstools-app/faceit-wrapper": "^0.0.3",
+    "node-fetch": "^3.1.0",
     "proxy-addr": "^2.0.7",
     "reflect-metadata": "^0.1.13",
     "source-map-support": "^0.5.21"
