@@ -20,4 +20,13 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/faceit', 'FaceitController.get')
+Route.get('/', ({ response }) => response.redirect('https://api.docs.demiann.dev'))
+
+Route.group(() => {
+  Route.get('/', 'FaceitController.get')
+}).prefix('faceit')
+
+Route.group(() => {
+  Route.get('/', 'SteamController.get')
+  Route.get('/transform', 'SteamController.transform')
+}).prefix('/steam')
