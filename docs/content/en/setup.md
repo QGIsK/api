@@ -2,41 +2,17 @@
 title: Setup
 description: ''
 position: 2
-category: Guide
+category: Getting Started
 ---
 
-Check the [Nuxt.js documentation](https://nuxtjs.org/guides/configuration-glossary/configuration-modules) for more information about installing and using modules in Nuxt.js.
+### Endpoint
 
-## Installation
+```bash
+https://api.demiann.dev
+```
 
-Add `@nuxtjs/xxx` dependency to your project:
+### Sending requests
 
-<code-group>
-  <code-block label="Yarn" active>
+```
 
-  ```bash
-  yarn add @nuxtjs/xxx
-  ```
-
-  </code-block>
-  <code-block label="NPM">
-
-  ```bash
-  npm install @nuxtjs/xxx
-  ```
-
-  </code-block>
-</code-group>
-
-Then, add `@nuxtjs/xxx` to the `modules` section of `nuxt.config.js`:
-
-```js[nuxt.config.js]
-{
-  modules: [
-    '@nuxtjs/xxx'
-  ],
-  xxx: {
-    // Options
-  }
-}
 ```
