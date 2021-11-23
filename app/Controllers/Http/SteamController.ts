@@ -21,7 +21,9 @@ export default class SteamController {
 
     const profile = query.id
       ? await Resolve.toCustomURL(query.id)
-      : await Resolve.fromCustomURL(query.customUrl)
+      : query.customUrl
+      ? await Resolve.fromCustomURL(query.customUrl)
+      : await Resolve.fromGroupURLToID(query.groupUrl)
 
     return response.send(profile)
   }
