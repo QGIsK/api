@@ -1,10 +1,20 @@
 ---
-title: /faceit
+title: Level
 description: 'Get faceit level and elo.'
-position: 3
-category: 'Endpoints'
+position: 5
+category: 'Faceit'
+features:
+  - Level & Elo from Username & ID
+  - Level icons
 ---
 
+## Features
+
+<list :items="features"></list>
+
+## About
+
+Faceit is a online game-platform.
 Prefer to handle this without an api call? Checkout this [package](https://github.com/cstools-app/faceit-wrapper)
 
 ## Endpoint
@@ -42,4 +52,3 @@ https://api.demiann.dev/faceit
   "icon": "https://cdn.demiann.dev/images/faceit/levels/level10.svg"
 }
 ```
-  

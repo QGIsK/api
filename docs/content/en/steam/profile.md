@@ -1,37 +1,30 @@
 ---
-title: /steam
-description: ''
-position: 4
-category: 'Endpoints'
+title: Profiles
+description: 'Returns Steam profiles in JSON format'
+position: 3
+category: 'Steam'
 features:
-  - Steam Profiles
-  - ID to Custom URL
-  - Custom URL to ID
+  - Full Profile from Custom URL
+  - Full Profile from Steam64ID
 ---
 
 ## Features
 
 <list :items="features"></list>
 
-## Profile
-
-This method returns a full profile in JSON format
-
-All endpoints support either a full steam url, just the id/custom url
-
-Make sure all id's are a `steam64`
+Make sure all id's are `steam64`
 
 Prefer to handle this without an api call? Checkout this [package](https://steamresolver.docs.demiann.dev)
 
-### From ID
+## From ID
 
-#### Endpoint
+### Endpoint
 
     - URL: https://api.demiann.dev/steam
     - Query: id
       - Type: Steam 64ID
 
-#### Example
+### Example
 
 <code-group>
   <code-block label="Request URL" active>
@@ -76,15 +69,15 @@ https://api.demiann.dev/steam?id=76561198250920834
   </code-block>
 </code-group>
 
-### From CustomUrl
+## From CustomUrl
 
-#### Endpoint
+### Endpoint
 
     - Endpoint: https://api.demiann.dev/steam
     - Query: customUrl
       - Type: Steam Custom Url
 
-#### Example
+### Example
 
 <code-group>
   <code-block label="Request URL" active>
@@ -124,91 +117,6 @@ https://api.demiann.dev/steam?customUrl=Demiann
     }
   ]
 }
-```
-
-  </code-block>
-</code-group>
-
-## Transform
-
-This method transforms an ID into a custom url, and the other way around.
-
-### From ID to CustomURL
-
-#### Query
-
-    - Endpoint: https://api.demiann.dev/steam/transform
-    - Query: id
-      - Type: Steam64 ID
-
-#### Example
-
-<code-group>
-  <code-block label="Request URL" active>
-
-```bash
-https://api.demiann.dev/steam/transform?id=76561198250920834
-```
-
-  </code-block>
-    <code-block label="Output">
-
-```bash
-Demiann
-```
-
-  </code-block>
-</code-group>
-
-### From CustomURL To ID
-
-#### Query
-
-    - Endpoint: https://api.demiann.dev/steam/transform
-    - Query: customUrl
-      - Type: Custom steam url
-
-#### Example
-
-<code-group>
-  <code-block label="Request URL" active>
-
-```bash
-https://api.demiann.dev/steam/transform?customUrl=Demiann
-```
-
-  </code-block>
-    <code-block label="Output">
-
-```bash
-76561198250920834
-```
-
-  </code-block>
-</code-group>
-
-### GroupURL To ID
-
-#### Query
-
-    - Endpoint: https://api.demiann.dev/steam/transform
-    - Query: groupUrl
-      - Type: Custom steam url
-
-#### Example
-
-<code-group>
-  <code-block label="Request URL" active>
-
-```bash
-https://api.demiann.dev/steam/transform?groupUrl=ROBOTAIM
-```
-
-  </code-block>
-    <code-block label="Output">
-
-```bash
-103582791463600727
 ```
 
   </code-block>
