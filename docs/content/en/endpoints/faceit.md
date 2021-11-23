@@ -5,35 +5,35 @@ position: 3
 category: 'Endpoints'
 ---
 
+Prefer to handle this without an api call? Checkout this [package](https://github.com/cstools-app/faceit-wrapper)
+
 ## Endpoint
 
 ```bash
 https://api.demiann.dev/faceit
 ```
 
-## Supported Queries
+## From ID
 
-### id
+#### Query ID
 
     - Type: Faceit ID
+    - Query: ?id=
+    - Examples:
+      - ?id=cf5c2089-b4a6-4201-a69b-9fd608429c79
+      - https://api.demiann.dev/faceit?id=cf5c2089-b4a6-4201-a69b-9fd608429c79
 
-#### Example
+## From Username
 
-```
-https://api.demiann.dev/faceit?id=cf5c2089-b4a6-4201-a69b-9fd608429c79
-```
-
-### username
+#### Query Username
 
     - Type: Faceit Username
+    - Query: ?username=
+    - Examples:
+      - ?username=DotJar
+      - https://api.demiann.dev/faceit?username=DotJar
 
-#### Example
-
-```
-https://api.demiann.dev/faceit?username=DotJar
-```
-
-### Output Example
+## Output
 
 ```json
 {
@@ -42,3 +42,4 @@ https://api.demiann.dev/faceit?username=DotJar
   "icon": "https://cdn.demiann.dev/images/faceit/levels/level10.svg"
 }
 ```
+  
