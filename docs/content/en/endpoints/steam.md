@@ -27,70 +27,189 @@ Prefer to handle this without an api call? Checkout this [package](https://steam
 
 #### Endpoint
 
+    - URL: https://api.demiann.dev/steam
+    - Query: id
+      - Type: Steam 64ID
+
+#### Example
+
+<code-group>
+  <code-block label="Request URL" active>
+
 ```bash
-https://api.demiann.dev/steam
+https://api.demiann.dev/steam?id=76561198250920834
 ```
 
-#### Query
+  </code-block>
+    <code-block label="Output">
 
-    - Type: Steam 64ID
-    - Query: id
-    - Examples:
-        - ?id=76561198250920834
-        - https://api.demiann.dev/steam?id=?id=76561198250920834
+```json
+{
+  "steamID64": ["76561198250920834"],
+  "steamID": ["Demian"],
+  "onlineState": ["offline"],
+  "stateMessage": ["Offline"],
+  "privacyState": ["public"],
+  "visibilityState": ["3"],
+  "avatarIcon": [""],
+  "avatarMedium": [""],
+  "avatarFull": [""],
+  "vacBanned": ["0"],
+  "tradeBanState": ["None"],
+  "isLimitedAccount": ["0"],
+  "customURL": ["Demiann"],
+  "memberSince": ["September 18, 2015"],
+  "steamRating": [""],
+  "hoursPlayed2Wk": ["0.0"],
+  "headline": [""],
+  "location": ["Faroe Islands"],
+  "realname": ["Demian"],
+  "summary": [""],
+  "groups": [
+    {
+      "group": []
+    }
+  ]
+}
+```
+
+  </code-block>
+</code-group>
 
 ### From CustomUrl
 
 #### Endpoint
 
+    - Endpoint: https://api.demiann.dev/steam
+    - Query: customUrl
+      - Type: Steam Custom Url
+
+#### Example
+
+<code-group>
+  <code-block label="Request URL" active>
+
 ```bash
-https://api.demiann.dev/steam
+https://api.demiann.dev/steam?customUrl=Demiann
 ```
 
-#### Query
+  </code-block>
+    <code-block label="Output">
 
-    - Type: Steam Custom Url
-    - Query: customUrl
-    - Examples:
-      - ?customUrl=Demiann
-      - https://api.demiann.dev/steam?customUrl=Demiann
+```json
+{
+  "steamID64": ["76561198250920834"],
+  "steamID": ["Demian"],
+  "onlineState": ["offline"],
+  "stateMessage": ["Offline"],
+  "privacyState": ["public"],
+  "visibilityState": ["3"],
+  "avatarIcon": [""],
+  "avatarMedium": [""],
+  "avatarFull": [""],
+  "vacBanned": ["0"],
+  "tradeBanState": ["None"],
+  "isLimitedAccount": ["0"],
+  "customURL": ["Demiann"],
+  "memberSince": ["September 18, 2015"],
+  "steamRating": [""],
+  "hoursPlayed2Wk": ["0.0"],
+  "headline": [""],
+  "location": ["Faroe Islands"],
+  "realname": ["Demian"],
+  "summary": [""],
+  "groups": [
+    {
+      "group": []
+    }
+  ]
+}
+```
+
+  </code-block>
+</code-group>
 
 ## Transform
 
 This method transforms an ID into a custom url, and the other way around.
 
-#### Endpoint
-
-```bash
-https://api.demiann.dev/steam/transform
-```
-
 ### From ID to CustomURL
 
 #### Query
 
-    - Type: Steam64 ID
+    - Endpoint: https://api.demiann.dev/steam/transform
     - Query: id
-    - Examples:
-      - ?id=76561198250920834
-      - https://api.demiann.dev/steam/transform?id=76561198250920834
+      - Type: Steam64 ID
+
+#### Example
+
+<code-group>
+  <code-block label="Request URL" active>
+
+```bash
+https://api.demiann.dev/steam/transform?id=76561198250920834
+```
+
+  </code-block>
+    <code-block label="Output">
+
+```bash
+Demiann
+```
+
+  </code-block>
+</code-group>
 
 ### From CustomURL To ID
 
 #### Query
 
-    - Type: Custom steam url
+    - Endpoint: https://api.demiann.dev/steam/transform
     - Query: customUrl
-    - Examples:
-      - ?customUrl=Demiann
-      - https://api.demiann.dev/steam/transform?customUrl=Demiann
+      - Type: Custom steam url
 
-### Group URL To ID
+#### Example
 
-## Profile
+<code-group>
+  <code-block label="Request URL" active>
 
-### From Custom
+```bash
+https://api.demiann.dev/steam/transform?customUrl=Demiann
+```
 
-### From Group
+  </code-block>
+    <code-block label="Output">
 
-### From ID
+```bash
+76561198250920834
+```
+
+  </code-block>
+</code-group>
+
+### GroupURL To ID
+
+#### Query
+
+    - Endpoint: https://api.demiann.dev/steam/transform
+    - Query: groupUrl
+      - Type: Custom steam url
+
+#### Example
+
+<code-group>
+  <code-block label="Request URL" active>
+
+```bash
+https://api.demiann.dev/steam/transform?groupUrl=ROBOTAIM
+```
+
+  </code-block>
+    <code-block label="Output">
+
+```bash
+103582791463600727
+```
+
+  </code-block>
+</code-group>
