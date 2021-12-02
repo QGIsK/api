@@ -10,6 +10,8 @@ export default class FaceitController {
   public async get({ request, response }: HttpContextContract) {
     const query = request.qs()
 
+    if (!query.username && !query.id) return response.badRequest('Username or ID Required.')
+
     const profile = query.username
       ? await FaceitClient.players.get({ nickname: query.username })
       : await FaceitClient.players.show({ player_id: query.id })
