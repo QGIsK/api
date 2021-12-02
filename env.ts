@@ -32,4 +32,8 @@ export default Env.rules({
   STEAM_ID: Env.schema.string(),
   STEAM_CUSTOM: Env.schema.string(),
   STEAM_GROUP: Env.schema.string(),
+
+  FACEIT_BASE: Env.schema.string({ format: 'host' }),
+
+  FACEIT_PLAYER: Env.schema.string(),
 })

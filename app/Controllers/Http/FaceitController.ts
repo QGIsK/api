@@ -24,14 +24,20 @@ export default class FaceitController {
     const skillLevel = profile.games[gameIndex].skill_level
     const elo = profile.games[gameIndex].faceit_elo
 
-    const icon = `https://${Env.get('CDN_BASE')}/${Env.get('FACEIT_ICON_PATH')}/level${
-      profile.games[gameIndex].skill_level
-    }.svg`
+    const icon = buildIconUrl(profile.games[gameIndex].skill_level)
+    const profileUrl = buildProfileUrl(Env.get('FACEIT_PLAYER'), profile.nickname)
 
     return response.send({
       skillLevel,
       elo,
       icon,
+      profileUrl,
     })
   }
 }
+
+const buildIconUrl = (level: String) =>
+  `https://${Env.get('CDN_BASE')}/${Env.get('FACEIT_ICON_PATH')}/level${level}.svg`
+
+const buildProfileUrl = (type: String, nickname: String) =>
+  `https://${Env.get('FACEIT_BASE')}/${type}/${nickname}`
