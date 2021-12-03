@@ -13,7 +13,7 @@ export default class SteamController {
     if (!query.id && !query.customUrl) return response.badRequest('ID or CustomURl Required.')
 
     const profile = query.id
-      ? await Resolve.from64ToProfile(query.id)
+      ? await Resolve.fromIdToProfile(query.id)
       : await Resolve.fromCustomToProfile(query.customUrl)
 
     return response.send(profile)
