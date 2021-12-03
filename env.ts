@@ -26,4 +26,14 @@ export default Env.rules({
 
   FACEIT_KEY: Env.schema.string(),
   FACEIT_ICON_PATH: Env.schema.string(),
+
+  STEAM_BASE: Env.schema.string({ format: 'host' }),
+
+  STEAM_ID: Env.schema.string(),
+  STEAM_CUSTOM: Env.schema.string(),
+  STEAM_GROUP: Env.schema.string(),
+
+  FACEIT_BASE: Env.schema.string({ format: 'host' }),
+
+  FACEIT_PLAYER: Env.schema.string(),
 })

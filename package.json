@@ -30,7 +30,7 @@
     "@adonisjs/core": "^5.4.1",
     "@adonisjs/repl": "^3.1.7",
     "@cstools-app/faceit-wrapper": "^0.0.3",
-    "@qgisk/steamresolver": "^2.0.1",
+    "@qgisk/steamresolver": "^2.0.2",
     "node-fetch": "^3.1.0",
     "proxy-addr": "^2.0.7",
     "reflect-metadata": "^0.1.13",
