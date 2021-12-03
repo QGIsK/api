@@ -33,4 +33,5 @@ Route.group(() => {
 
 Route.group(() => {
   Route.get('pinned', 'GithubController.pinned')
+  Route.get('pinned/details', 'GithubController.pinnedDetails')
 }).prefix('gh')

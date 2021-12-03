@@ -38,4 +38,7 @@ export default Env.rules({
   STEAM_GROUP: Env.schema.string(),
 
   GITHUB_BASE: Env.schema.string({ format: 'host' }),
+  GITHUB_API: Env.schema.string({ format: 'host' }),
+  GITHUB_API_REPO: Env.schema.string(),
+  GITHUB_TOKEN: Env.schema.string(),
 })
