@@ -20,13 +20,17 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', ({ response }) => response.redirect('https://api.docs.demiann.dev'))
+Route.get('/', ({ response }) => response.redirect('https://api.docs.demiann.dev', undefined, 302))
 
 Route.group(() => {
-  Route.get('/', 'FaceitController.get')
+  Route.get('', 'FaceitController.get')
 }).prefix('faceit')
 
 Route.group(() => {
-  Route.get('/', 'SteamController.get')
-  Route.get('/transform', 'SteamController.transform')
-}).prefix('/steam')
+  Route.get('', 'SteamController.get')
+  Route.get('transform', 'SteamController.transform')
+}).prefix('steam')
+
+Route.group(() => {
+  Route.get('pinned', 'GithubController.pinned')
+}).prefix('gh')

@@ -25,7 +25,11 @@ export default Env.rules({
   CDN_BASE: Env.schema.string({ format: 'host' }),
 
   FACEIT_KEY: Env.schema.string(),
+
+  FACEIT_BASE: Env.schema.string({ format: 'host' }),
+
   FACEIT_ICON_PATH: Env.schema.string(),
+  FACEIT_PLAYER: Env.schema.string(),
 
   STEAM_BASE: Env.schema.string({ format: 'host' }),
 
@@ -33,7 +37,5 @@ export default Env.rules({
   STEAM_CUSTOM: Env.schema.string(),
   STEAM_GROUP: Env.schema.string(),
 
-  FACEIT_BASE: Env.schema.string({ format: 'host' }),
-
-  FACEIT_PLAYER: Env.schema.string(),
+  GITHUB_BASE: Env.schema.string({ format: 'host' }),
 })
