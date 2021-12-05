@@ -83,7 +83,7 @@ const simpleParsed = ($: CheerioAPI, elem) => {
     repository: buildRepo(repoLink),
     about: repoAbout,
     language: repoLanguage,
-    languageColor: repoLanguageColor.split(':')[1],
+    languageColor: repoLanguageColor.split(':')[1].trim(),
   }
 }
 
