@@ -1,7 +1,7 @@
 ---
 title: Information
 description: 'Returns information about shortcode e.g. the actual link'
-position: 10
+position: 11
 category: 'Redirect'
 ---
 

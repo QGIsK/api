@@ -1,7 +1,7 @@
 ---
 title: Redirect
 description: 'Redirects to URL'
-position: 9
+position: 10
 category: 'Redirect'
 ---
 

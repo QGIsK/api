@@ -1,7 +1,7 @@
 ---
 title: Generate
 description: 'Generates a shortURL'
-position: 7
+position: 8
 category: 'Redirect'
 ---
 
