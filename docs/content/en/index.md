@@ -7,6 +7,7 @@ features:
   - Github Pinned, Simple & Detailed
   - Faceit Levels, From Usernames and SteamID
   - Steam Profiles, Transformers
+  - Downloader for images.
 ---
 
 ## Features
