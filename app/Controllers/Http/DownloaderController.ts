@@ -19,13 +19,13 @@ export default class DownloaderController {
     const ext = query.url.split('.').pop()
     const gif = ext === 'gif'
 
-    console.log(ext)
+    const mimeType = gif ? 'image/gif' : ext === 'jpg' ? 'image/jpeg' : 'image/png'
 
     const fileName = gif ? `gify.gif` : `image.${ext}`
 
     response
       .header('Content-Disposition', `attachment="${fileName}"`)
-      .header('Content-Type', gif ? 'image/gif' : `image/${ext}`)
+      .header('Content-Type', mimeType)
       .send(res.data)
   }
 }
