@@ -9,8 +9,7 @@ category: Downloader
 
 A simple way to send a download directly to a user.
 
-for this service we need to temporarily store the file.
-After we've send the file download back, the image/gif gets deleted immediately. Paranoid? Checkout the source code, oh and also the host we use doesn't have persistent data.
+All we do is play with the headers, you can easily handle this by your self playing with Content-Disposition, Content-Type & a ResponseType of ArrayBuffer.
 
 ### Endpoint
 
