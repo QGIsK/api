@@ -21,10 +21,10 @@ export default class DownloaderController {
 
     const mimeType = gif ? 'image/gif' : ext === 'jpg' ? 'image/jpeg' : 'image/png'
 
-    const fileName = gif ? `gify.gif` : `image.${ext}`
+    const fileName = gif ? `gify` : `image`
 
     response
-      .header('Content-Disposition', `attachment="${fileName}"`)
+      .header('Content-Disposition', `attachment; filename="${fileName}"`)
       .header('Content-Type', mimeType)
       .send(res.data)
   }
